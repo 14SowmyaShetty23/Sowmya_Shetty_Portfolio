@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Sowmya_Shetty_Portfolio
+ A fully responsive personal portfolio website built using HTML, CSS, and JavaScript. The interface is clean, modern, and optimized for all devices including mobile, tablet, and desktop. This project showcases my skills, educational background, experience, certifications, and various web development projects — all in one place.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ​ Sowmya Shetty – Responsive Portfolio Website
 
-## Available Scripts
+A fully responsive personal portfolio website built using HTML, CSS, and JavaScript. The design looks clean and modern, and adapts smoothly across mobile, tablet, and desktop devices.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+##  Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔗 [View Portfolio](https://sowmya-shetty-portfolio.vercel.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+##  Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📁 GitHub: [My Portfolio Source Code](https://github.com/14SowmyaShetty23/My_portfolio)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##  Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Fully responsive across all device sizes (mobile, tablet, desktop)
+- Sections for About Me, Skills, Experience, Education, Projects, Certificates, and Contact
+- Project gallery with GitHub and live demo links
+- Certificates showcase
+- Contact section with email and LinkedIn
+- Downloadable resume and smooth hamburger menu navigation on mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+##  Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **HTML5** – Semantic markup
+- **CSS3** – Styling and responsive media queries
+- **JavaScript** – Interactivity and navigation toggles
+- **Vercel** – Live deployment hosting
+- **Git & GitHub** – Version control
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
