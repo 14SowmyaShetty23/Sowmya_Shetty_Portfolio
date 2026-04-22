@@ -4,11 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="icon" type="image/png" href="/assets/SOWMYA SHETTYPIC.jpg">
+    <link rel="icon" type="image/png" href="assets/Logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
     <link rel="stylesheet" href="mediaqueries.css">
     <title>Sowmya Shetty</title>
+    <!-- EmailJS removed, using Web3Forms fetch API instead -->
+    <style>
+        section + section::before {
+            content: '';
+            display: block;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(139,92,246,0.4), transparent);
+            margin-bottom: 2rem;
+        }
+        .text-container { color: #94a3b8; line-height: 1.8; }
+        h3, h4 { color: #e2e8f0; }
+        strong { color: #c4b5fd; }
+    </style>
 </head>
 
 <body>
@@ -17,9 +29,16 @@
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                  <li><a href="#Education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Project</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li class="nav-dropdown">
+                    <a href="#internship">Experience ▾</a>
+                    <ul class="nav-submenu">
+                        <li><a href="#internship">Internship</a></li>
+                        <li><a href="#experience">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -31,38 +50,39 @@
                 <span></span>
                 <span></span>
                 <span></span>
-
-
             </div>
-
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#Education" onclick="toggleMenu()">Education</a></li>
+                <li><a href="#internship" onclick="toggleMenu()">Internship</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
     </nav>
     <section id="profile">
-        <div class="section_pic-container">
-            <img src="./assets/SOWMYA SHETTYPIC.jpg" alt="Sowmya Shetty Profile Picture">
+        <div class="section_pic-container" style="border-radius:50%;">
+            <img src="./assets/SOWMYA SHETTYPIC.jpg" alt="Sowmya Shetty Profile Picture" style="border-radius:50%;width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="section_text">
             <p class="section_text_p1">Hello,I'm</p>
             <h1 class="title">Sowmya Shetty</h1>
-            <p class="section_text_p2">Web Developer</p>
+            <p class="section_text_p2"><span id="rotating-role">Web Developer</span></p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resumePIC.pdf')"> Download
+                <button class="btn btn-color-1" onclick="window.open('./assets/sowmyashettymijar.pdf')"> Download
                     Resume</button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'"> Contact Info</button>
+                <!-- <button class="btn btn-color-1" onclick="location.href='./#contact'"> Contact Info</button> -->
 
             </div>
            <div id="socials-container">
     <img src="./assets/linkedin.png" alt="My LinkedIn Account" class="icon"
         onclick="location.href='https://www.linkedin.com/in/sowmyashetty14'" />
-    
     <img src="./assets/github.png" alt="My GitHub Account" class="icon"
         onclick="location.href='https://github.com/14SowmyaShetty23'" />
+    <img src="./assets/email.png" alt="My Email" class="icon"
+        onclick="location.href='mailto:14sowmyashetty23@gmail.com'" />
 </div>
 
 
@@ -76,31 +96,7 @@
         </p>
         <h1 class="title1">About Me</h1>
         <div class="section-container">
-            <div class="section_pic-container">
-                <img src="./assets/Lap.jpg" alt="Profile picture" class="about-pic"/>
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                  <div class="details-containers">
-    <img src="./assets/experience.png" alt="Experience icon" class="icon">
-    <h3>Professional Experience</h3>
-    <p>
-        Completed a <strong>one-month summer internship</strong> as a <strong>Technical Intern</strong>, gaining practical experience in software development and UI design.
-    </p>
-
-    <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/Offer.pdf')">
-            View Offer Letter
-        </button>
-
-        <button class="btn btn-color-2" onclick="window.open('./assets/MsSowmya.pdf')">
-            View Certificate
-        </button>
-    </div>
-</div>
-
-                   
-                </div>
+           
                 <div class="text-container"> A passionate and dedicated Computer Science undergraduate with strong skills in web development, programming, and
  problem-solving. I am eager to apply my technical knowledge and creativity to build practical and efficient software
  solutions while continuously learning through real-world projects and internships. I quickly pick up new technologies
@@ -108,277 +104,232 @@
  collaborative team environments. I am disciplined and manage my time effectively to meet deadlines, while staying
  self-motivated and proactive. Comfortable with change, I embrace adaptability and maintain a growth mindset, always
  eager to improve. My patience, persistence, and positive problem-solving attitude complement my technical abilities,
- enabling me to contribute meaningfully as a software engineer fresher.<p>
-
-                </p></div>
+ enabling me to contribute meaningfully as a software engineer fresher.</div>
             </div>
 
         </div>
         <img src="./assets/arrow.png" alt="Arrow image" 
         class="icon arrow"
-        onclick="location.href='./#Education'">
+        onclick="location.href='./#internship'">
     </section>
+    <section id="internship">
+        <p class="section_text_p1">My Work Experience</p>
+        <h1 class="title">Internships</h1>
+        <div class="experience-details-container">
+
+            <!-- Yaticorp -->
+            <div class="internship-card reveal">
+                <div class="internship-header">
+                    <div class="internship-meta">
+                        <h2 class="internship-role">Backend Developer</h2>
+                        <h3 class="internship-company">Yaticorp India Pvt Ltd <span class="internship-type">(Onsite)</span></h3>
+                        <span class="internship-date">Feb 2026 – Present</span>
+                    </div>
+                    <div class="internship-badge current">Current</div>
+                </div>
+                <div class="internship-tags">
+                    <span>Node.js</span><span>React</span><span>REST APIs</span><span>GSC</span>
+                    <span>GitHub Actions</span><span>Vercel</span><span>Railway</span>
+                </div>
+                <button class="btn btn-color-2 intern-detail-btn"
+                    onclick="openIntern(
+                        'Backend Developer',
+                        'Yaticorp India Pvt Ltd (Onsite)',
+                        'Feb 2026 – Present',
+                        'current',
+                        [
+                            'Working on backend development, RESTful APIs, and database management for production-level applications.',
+                            'Collaborating with frontend and design teams to ensure seamless system integration.',
+                            'Implementing secure and scalable server-side logic using modern backend technologies.',
+                            'Built and deployed an LMS system using Node.js, React, and ML integration.',
+                            'Developed APIs and integrated frontend, backend, and ML workflows.',
+                            'Managed and mentored the intern team, coordinating tasks and ensuring timely project delivery.',
+                            'Deployed applications using Railway and Vercel.',
+                            'Conducted SEO analysis using Google Search Console.',
+                            'Performed testing, debugging, and version control using Git.'
+                        ]
+                    )">View Details ↗</button>
+            </div>
+
+            <!-- FixMyRide -->
+            <div class="internship-card reveal">
+                <div class="internship-header">
+                    <div class="internship-meta">
+                        <h2 class="internship-role">Technical Intern</h2>
+                        <h3 class="internship-company">FixMyRide <span class="internship-type">(Hybrid)</span></h3>
+                        <span class="internship-date">Apr 2024 – May 2024</span>
+                    </div>
+                    <div class="internship-badge past">Completed</div>
+                </div>
+                <div class="internship-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Frontend</span>
+                </div>
+                <button class="btn btn-color-2 intern-detail-btn"
+                    onclick="openIntern(
+                        'Technical Intern',
+                        'FixMyRide (Hybrid)',
+                        'Apr 2024 – May 2024',
+                        'past',
+                        [
+                            'Contributed to the company\'s web platform development, focusing on frontend technologies.',
+                            'Coordinated with cross-functional teams to ensure timely delivery of web features and technical updates.'
+                        ]
+                    )">View Details ↗</button>
+            </div>
+
+        </div>
+
+        <!-- Internship detail modal -->
+        <div class="intern-backdrop" id="intern-backdrop" onclick="closeIntern()">
+            <div class="intern-modal" onclick="event.stopPropagation()">
+                <button class="intern-modal-close" onclick="closeIntern()">✕</button>
+                <div class="intern-modal-header">
+                    <div>
+                        <h2 id="im-role"></h2>
+                        <h3 id="im-company"></h3>
+                        <span id="im-date"></span>
+                    </div>
+                    <div id="im-badge"></div>
+                </div>
+                <ul class="intern-modal-points" id="im-points"></ul>
+            </div>
+        </div>
+
+        <img src="./assets/arrow.png" alt="Arrow image" class="icon arrow" onclick="location.href='./#Education'">
+    </section>
+
       <section id="Education">
     <p class="section_text_p1">My Field of Study</p>
     <h1 class="title">Education</h1>
     <div class="experience-details-container">
-       <div class="about-containers">
-        <div class="details-containers color-container">
-            <div class="article-container">
-                <img src="./assets/Alvas.jpg" alt="Calculator" class="project-img"/>
-            </div>
-            <br/>
-         <h4>Alva's Intitute of Engineering and Technology</h4>
-         
-                        <p>BE Computer Science and Engineering<br /> 
-                            2022-2026<br/>
-                        9.11 CGPA</p>
-         <div class="btn-container">
-            <!-- <button class="btn btn-color-2" onclick="window.open('./assets/sem01.pdf')">
-            Certificate
+       <div class="about-containers" style="justify-content:center;flex-wrap:wrap;gap:1.5rem;">
 
-            </button> -->
-              <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://www.aiet.org.in/'">
-            Website-->
-
-            </button>
-         </div>
-
-
-
-
+        <div class="edu-card" onclick="openEdu('Alva\'s Institute of Engineering and Technology','BE Computer Science and Engineering<br/>2022–2026<br/>9.11 CGPA','https://www.aiet.org.in/')">
+            <img src="./assets/Alvas.jpg" alt="Alvas Institute" class="edu-thumb"/>
         </div>
-        <div class="details-containers color-container">
-            <div class="article-container">
-                <img src="./assets/rotaryschool.png" alt="Calculator" class="project-img"/>
-            </div>
-         <br/>
-         <h4>Rotary PU College</h4>
-          <br/>
-                        <p>Pre-University(PCMC)<br /> 
-                            2020-2022<br/>
-                        96.00 %</p>
-         <div class="btn-container">
-             
-              <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://www.rotaryinstitutions.com/'">
-            Website-->
 
-            </button>
-         </div>
-
-
-
-
+        <div class="edu-card" onclick="openEdu('Rotary PU College','Pre-University (PCMC)<br/>2020–2022<br/>96.00%','https://www.rotaryinstitutions.com/')">
+            <img src="./assets/rotaryschool.png" alt="Rotary PU College" class="edu-thumb"/>
         </div>
-        <div class="details-containers color-container">
-            <div class="article-container">
-                <img src="./assets/rotaryschool.png" alt="Tic-Tac-Tae" class="project-img"/>
-            </div>
-         <br/>
-         <h4>Rotary English Medium School</h4>
-         <br/>
-         
-                        <p>SSLC<br /> 
-                            2008-2020<br/>
-                        88.88 %</p>
-         <div class="btn-container">
-             
-              <button class="btn btn-color-2 project-btn"
-           onclick="location.href='https://www.rotaryinstitutions.com/'">
-            Website-->
 
-            </button>
-         </div>
-
-
-
+        <div class="edu-card" onclick="openEdu('Rotary English Medium School','SSLC<br/>2008–2020<br/>88.88%','https://www.rotaryinstitutions.com/')">
+            <img src="./assets/rotaryschool.png" alt="Rotary English Medium School" class="edu-thumb"/>
         </div>
-      
-         </div>
-        
-        
-   
-</div>
- <img src="./assets/arrow.png" alt="Arrow image" 
-        class="icon arrow"
-        onclick="location.href='./#experience'">
+
+       </div>
+    </div>
+
+    <!-- Modal popup -->
+    <div class="edu-backdrop" id="edu-backdrop" onclick="closeEdu()">
+        <div class="edu-modal" onclick="event.stopPropagation()">
+            <button class="edu-modal-close" onclick="closeEdu()">✕</button>
+            <h4 id="edu-modal-title"></h4>
+            <p id="edu-modal-body"></p>
+            <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" id="edu-modal-btn">Website →</button>
+            </div>
+        </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow image" class="icon arrow" onclick="location.href='./#experience'">
    </section>
     <section id="experience">
-        <p class="section_text_p1">
-            Explore My
-        </p>
+        <p class="section_text_p1">Explore My</p>
         <h1 class="title">Skills & Technologies</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
 
-<div class="details-containers">
-                <h2 class="experience-sub-title">Platfrom And Coding Tools</h2>
-                <div class="article-container">
-                   
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>VS Code</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Eclipse</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Linux Terminal</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Turbo C IDE</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>XAMP</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                      <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>ServiceNow</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Vercel</h3>
-                        <p>Intermediate</p></div>
-                    </article>
-                     <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Excel</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>github</h3>
-                        <p>Intermediate</p></div>
-                    </article>
-                </div>
-                </div>
+        <div class="skills-accordion">
 
-                
-                      <div class="details-containers">
-                <h2 class="experience-sub-title">Backend Development</h2>
-                <div class="article-container">
-                   
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Mysql</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>API integration</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>C programming</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Java programming</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Data Structures & Algorithms</h3>
-                        <p>Intermediate</p></div>
-                    </article>
-                </div>
-                </div>
-                 
-            </div>
-            <div class="about-containers">
-                
-<div class="details-containers">
-                <h2 class="experience-sub-title">Frontend Development</h2>
-                <div class="article-container">
-                   
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>HTML</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>CSS</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>JavaScript</h3>
-                        <p>Intermediate</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>React Js</h3>
-                        <p>Beginner</p></div>
-                    </article>
-                </div>
-                </div>
-                <div class="details-containers">
-                <h2 class="experience-sub-title">System's and Network</h2>
-                <div class="article-container">
-                   
-                    <article class="article1">
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Fundamentals of Computer Networking</h3>
-                        <p>Experienced</p></div>
-                    </article>
-                    <article>
-                        <img src="./assets/checkmark.png" alt="Experience-icon"
-                        class="icon"/>
-                        <div><h3>Operating Systems</h3>
-                        <p>Intermediate</p></div>
-                    </article>
-                  
-                 
-                </div>
+            <!-- 1. Technical Skills -->
+            <div class="skill-group open">
+                <button class="skill-group-header" onclick="toggleSkill(this)">
+                    <span>💻 Technical Skills</span>
+                    <span class="skill-arrow">▾</span>
+                </button>
+                <div class="skill-group-body">
+                    <div class="skill-row">
+                        <span class="skill-label">Programming Languages</span>
+                        <div class="skill-tags"><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span></div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Frontend Development</span>
+                        <div class="skill-tags"><span>HTML</span><span>CSS</span><span>React</span></div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Backend Development</span>
+                        <div class="skill-tags"><span>Node.js</span></div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Database</span>
+                        <div class="skill-tags"><span>MySQL</span></div>
+                    </div>
                 </div>
             </div>
-            <img src="./assets/arrow.png" alt="Arrow image" 
-        class="icon arrow"
-        onclick="location.href='./#projects'">
-   </div>
-        
+
+            <!-- 2. Tools, Platforms & Core Concepts -->
+            <div class="skill-group open">
+                <button class="skill-group-header" onclick="toggleSkill(this)">
+                    <span>🛠️ Tools, Platforms & Core Concepts</span>
+                    <span class="skill-arrow">▾</span>
+                </button>
+                <div class="skill-group-body">
+                    <div class="skill-row">
+                        <span class="skill-label">Tools & Platforms</span>
+                        <div class="skill-tags">
+                            <span>Git</span><span>GitHub</span><span>VS Code</span><span>Eclipse</span>
+                            <span>Turbo C IDE</span><span>XAMP</span><span>ServiceNow</span>
+                            <span>AWS</span><span>Railway</span><span>Vercel</span>
+                            <span>Google Search Console</span><span>Excel</span>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Core Concepts</span>
+                        <div class="skill-tags">
+                            <span>Data Structures</span><span>Algorithms</span>
+                            <span>Operating Systems</span><span>Computer Networks</span>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Web & SEO Skills</span>
+                        <div class="skill-tags">
+                            <span>SEO</span><span>Web Crawling</span><span>Indexing</span>
+                            <span>Ranking</span><span>Sitemaps</span>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Testing</span>
+                        <div class="skill-tags"><span>Manual Testing</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Interpersonal & Leadership Skills -->
+            <div class="skill-group open">
+                <button class="skill-group-header" onclick="toggleSkill(this)">
+                    <span>🤝 Interpersonal & Leadership Skills</span>
+                    <span class="skill-arrow">▾</span>
+                </button>
+                <div class="skill-group-body">
+                    <div class="skill-tags solo">
+                        <span>Communication (Written & Verbal)</span>
+                        <span>Teamwork & Collaboration</span>
+                        <span>Problem-Solving</span>
+                        <span>Time Management</span>
+                        <span>Adaptability</span>
+                        <span>Conflict Resolution</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <img src="./assets/arrow.png" alt="Arrow image" class="icon arrow" onclick="location.href='./#projects'">
     </section>
    <section id="projects">
     <p class="section_text_p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
     <div class="experience-details-container">
          <div class="about-containers">
-        <div class="details-containers color-container">
+        <!-- <div class="details-containers color-container">
             <div class="article-container">
                 <img src="./assets/portfolio.png" alt="smartserve" class="project-img"/>
             </div>
@@ -399,7 +350,25 @@
 
 
 
-        </div>
+        </div> -->
+       <div class="details-containers color-container" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; padding:20px;">
+
+  <button class="btn btn-color-1" style="align-self:center;">
+    On Going
+  </button>
+
+  <h2 class="experience-sub-title project-title" style="margin:10px 0;">
+    Store Rating System
+  </h2>
+
+  <div class="btn-container" style="display:flex; justify-content:center;">
+    <button class="btn btn-color-2 project-btn"
+      onclick="location.href='https://github.com/14SowmyaShetty23/Store_rateingstServe'">
+      GitHub
+    </button>
+  </div>
+
+</div>
         <div class="details-containers color-container">
             <div class="article-container">
                 <img src="./assets/tudar.png" alt="Tudar" class="project-img"/>
@@ -580,93 +549,118 @@
   <p class="section_text_p1">Browse My</p>
   <h1 class="title">Certificates</h1>
 
-  <div class="experience-details-container">
-    <div class="about-containers">
-       <div class="details-containers color-container">
-        <h2 class="experience-sub-title project-title">The Interplay of HCI AR and VR</h2>
-         <p class="section_text_p2">IEEE Publish</p>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='./assets/ieee.png'">
-            View Certificate
-          </button>
-        </div>
-      </div>
-        <div class="details-containers color-container">
-        <h2 class="experience-sub-title project-title">Google Cloud Computing Foundations</h2>
-         <p class="section_text_p2">NPTEL Certification</p>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-                 onclick="location.href='./assets/nptel(2).png'">
-            View Certificate
-          </button>
-        </div>
+  <div class="cert-grid">
+
+    <div class="details-containers color-container">
+      <h2 class="experience-sub-title project-title">Technical Intern</h2>
+      
+      <p class="section_text_p2">Internship</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/MsSowmya.pdf')">Certificate</button>
       </div>
     </div>
-    <div class="about-containers">
-      <div class="details-containers color-container">
-        <h2 class="experience-sub-title project-title">Java Programming Fundamentals</h2>
-         <p class="section_text_p2">Infosys Spring-Board</p>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='./assets/springboard.png'">
-            View Certificate
-          </button>
-        </div>
-      </div>
-       <div class="details-containers color-container">
-        <h2 class="experience-sub-title project-title"> Data structures and Application</h2>
-         <p class="section_text_p2">codechef</p>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn"
-            onclick="location.href='https://www.codechef.com/certificates/preview/bb44b02'">
-            View Certificate
-          </button>
-        </div>
+
+    <div class="details-containers color-container">
+      <h2 class="experience-sub-title project-title">Laboratory Management System</h2>
+      <p class="section_text_p2">IEEE Publish</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="location.href='https://ieeexplore.ieee.org/document/11300558'">View Details</button>
       </div>
     </div>
+
+    <div class="details-containers color-container">
+      <h2 class="experience-sub-title project-title">The Interplay of HCI, AR and VR</h2>
+      <p class="section_text_p2">IEEE Publish</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/ieee.png')">View Certificate</button>
+      </div>
+    </div>
+
+    <div class="details-containers color-container">
+      <h2 class="experience-sub-title project-title">Google Cloud Computing Foundations</h2>
+      <p class="section_text_p2">NPTEL Certification</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/nptel (2).png')">View Certificate</button>
+      </div>
+    </div>
+
+    <div class="details-containers color-container">
+      <h2 class="experience-sub-title project-title">Java Programming Fundamentals</h2>
+      <p class="section_text_p2">Infosys SpringBoard</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/springboard.png')">View Certificate</button>
+      </div>
+    </div>
+
+    <div class="details-containers color-container">
+      <h2 class="experience-sub-title project-title">Data Structures and Application</h2>
+      <p class="section_text_p2">CodeChef</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('https://www.codechef.com/certificates/preview/bb44b02')">View Certificate</button>
+      </div>
+    </div>
+
   </div>
 
-  <img src="./assets/arrow.png" alt="Arrow image" 
-       class="icon arrow"
-       onclick="location.href='./#contact'">
+  <img src="./assets/arrow.png" alt="Arrow image" class="icon arrow" onclick="location.href='./#contact'">
 </section>
 
 <section id="contact">
+    <p class="section_text_p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
 
+    <div class="contact-links">
+        <a href="mailto:14sowmyashetty23@gmail.com" class="contact-link-item">
+            <img src="./assets/email.png" alt="Email" class="icon" /> 14sowmyashetty23@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/sowmyashetty14" target="_blank" class="contact-link-item">
+            <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" /> linkedin.com/in/sowmyashetty14
+        </a>
+        <a href="https://github.com/14SowmyaShetty23" target="_blank" class="contact-link-item">
+            <img src="./assets/github.png" alt="GitHub" class="icon" /> github.com/14SowmyaShetty23
+        </a>
+    </div>
 
- <p class="section_text_p1">
-            Get in Touch
-        </p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt=" Email icon"  class="icon contact-icon"/>
-                <p><a href="mailto:14sowmyashetty23@gmail.com">14sowmyashetty23</a></p>
+    <form class="contact-form" onsubmit="sendMail(event)">
+        <!-- Web3Forms access key — free, no backend needed -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+        <div class="form-row">
+            <div class="form-group">
+                <label for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your full name" required />
             </div>
-              <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt=" Email icon"  class="icon contact-icon"/>
-                <p><a href="https://www.linkedin.com/in/sowmyashetty14">LinkedIn</a></p>
+            <div class="form-group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
             </div>
         </div>
-
-    
+        <div class="form-group">
+            <label for="cf-phone">Phone Number</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="+91 00000 00000" />
+        </div>
+        <div class="form-group">
+            <label for="cf-message">Description</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-color-1 form-submit-btn">Send Message ➤</button>
+        <p class="form-status" id="form-status"></p>
+    </form>
 </section>
 <footer>
- <nav id="desktop-nav">
-       
+    <nav id="desktop-nav">
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                  <li><a href="#Education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                 <li><a href="#certificates">Certifications</a></li>
-                <li><a href="#projects">Project</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#internship">Internship</a></li>
+                <li><a href="#experience">Skills</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
-    <p>Copyright &#169; 2025 Sowmya Shetty, All Rights Reserved.</p>
+    <p>&#169; 2025 Sowmya Shetty.</p>
 </footer>
 
     <script src="script.js"></script>
